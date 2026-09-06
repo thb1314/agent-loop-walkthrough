@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-loop-walkthrough"
+version = "0.1.0"
+description = "从0到1设计一个简易版AgentLoop：Python 分步示例"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["packages*", "examples*"]
