@@ -40,7 +40,7 @@ class NoRedirectHandler(urllib.request.HTTPRedirectHandler):
 
     def redirect_request(
         self,
-        request: urllib.request.Request,
+        req: urllib.request.Request,
         fp: Any,
         code: int,
         msg: str,
@@ -63,7 +63,7 @@ class ResponsesClient:
         headers = {
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "User-Agent": "mini-pi-python/1.0",
+            "User-Agent": "agent-loop-walkthrough/1.0",
         }
         if self.api_key:
             headers["Authorization"] = f"Bearer {self.api_key}"
