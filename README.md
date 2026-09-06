@@ -54,7 +54,7 @@ python3 -m examples.step04_agent_loop --project ./sample_project --max-turns 8
 
 ## 4. 尚未启动模型时
 
-以下是与原 mini-pi-python 一致的运行配套，文章不讲其内部实现。配套适配器源码保留在 `packages/qianchat/`，这样它与原有导入路径一致，不必为移动目录改写协议代码。
+下面说明如何启动本项目使用的本地模型接口。`packages/qianchat/` 提供 Responses API 适配器，示例会通过它连接本机服务。
 
 先取得并构建 llama.cpp（来源：<https://github.com/ggml-org/llama.cpp>），准备具有相应使用授权的 Qwen3 GGUF 模型文件。本文实际使用 `Qwen3-0.6B-Q8_0.gguf`，模型校验值和运行器版本见上一级 `evidence/runtime.json`。可从 Qwen 官方模型组织 <https://huggingface.co/Qwen> 核对模型来源，并选择可信的 GGUF 分发；不同转换版本不能仅凭文件名视为完全相同。
 
